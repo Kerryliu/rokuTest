@@ -50,3 +50,5 @@ const tunnel = localtunnel(port, localtunnelOpts, (err, tunnel) => {
 
     app.listen(port, () => console.log(`Listening on port ${port}`));
 });
+
+tunnel.on('close', () => console.log('localTunnel closed...'));
